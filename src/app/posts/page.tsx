@@ -22,8 +22,8 @@ const Posts = async () => {
               }}
             >
               <div className="post">
-                <h3 className="list-item-title">{post.title}</h3>
                 <time>{dateString}</time>
+                <h3 className="list-item-title">{post.title}</h3>
               </div>
             </Link>
           );

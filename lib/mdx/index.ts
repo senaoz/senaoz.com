@@ -30,7 +30,5 @@ export const getAllPostsMeta = async () => {
 
   posts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
 
-  console.log(posts);
-
   return posts;
 };
