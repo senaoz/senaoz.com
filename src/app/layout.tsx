@@ -29,8 +29,6 @@ export default function RootLayout({
     segment = "";
   }
 
-  console.log(segment);
-
   return (
     <html lang="en">
       <head>
