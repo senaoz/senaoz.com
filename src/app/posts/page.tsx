@@ -26,7 +26,7 @@ const Posts = async () => {
             >
               <div className="post">
                 <time>{dateString}</time>
-                <h3 className="list-item-title">{post.title}</h3>
+                <h3 style={{ paddingBottom: 0 }}>{post.title}</h3>
               </div>
             </Link>
           );

@@ -45,7 +45,9 @@ export default function RootLayout({
                 <Link
                   key={href}
                   href={href}
-                  className={"/" + segment === href ? "link active" : "link"}
+                  className={
+                    "/" + segment === href ? "nav-item active" : "nav-item"
+                  }
                 >
                   {label}
                 </Link>

@@ -39,7 +39,7 @@ export const projects = [
 
 export const experience = [
   {
-    title: "Junior Software Developer (Part time)",
+    title: "Junior Software Developer (Part-time)",
     firm: "Orion Innovation",
     timePeriod: "Nov 2022 – Present",
     description: [
