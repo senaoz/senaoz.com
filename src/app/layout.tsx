@@ -6,6 +6,8 @@ import React from "react";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 
+import { Analytics } from "@vercel/analytics/react";
+
 const inter = Inter({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const data = {
@@ -30,28 +32,31 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en">
-      <head>
-        <meta name="description" content={data.description} />
-        <title>{data.title}</title>
-      </head>
-      <body className={inter.className}>
-        <header>
-          <nav>
-            {pages.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className={"/" + segment === href ? "link active" : "link"}
-              >
-                {label}
-              </Link>
-            ))}
-          </nav>
-        </header>
+    <>
+      <html lang="en">
+        <head>
+          <meta name="description" content={data.description} />
+          <title>{data.title}</title>
+        </head>
+        <body className={inter.className}>
+          <header>
+            <nav>
+              {pages.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className={"/" + segment === href ? "link active" : "link"}
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
+          </header>
 
-        <main>{children}</main>
-      </body>
-    </html>
+          <main>{children}</main>
+        </body>
+      </html>
+      <Analytics />
+    </>
   );
 }
