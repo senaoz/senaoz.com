@@ -4,7 +4,13 @@ import { compileMDX } from "next-mdx-remote/rsc";
 
 const rootDirectory = path.join(process.cwd(), "src", "content");
 
-export const getPostBySlug = async (slug) => {
+interface Meta {
+  slug?: string;
+  title?: string;
+  publishDate: string | number | Date;
+}
+
+export const getPostBySlug = async (slug: any) => {
   const realSlug = slug.replace(/\.mdx$/, "");
   const filePath = path.join(rootDirectory, `${realSlug}.mdx`);
 
@@ -15,7 +21,9 @@ export const getPostBySlug = async (slug) => {
     options: { parseFrontmatter: true },
   });
 
-  return { meta: { ...frontmatter, slug: realSlug }, content };
+  const meta = { ...frontmatter, slug: realSlug };
+
+  return { meta: meta as Meta, content };
 };
 
 export const getAllPostsMeta = async () => {
@@ -28,7 +36,9 @@ export const getAllPostsMeta = async () => {
     posts.push(meta);
   }
 
-  posts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+  posts.sort(
+    (a: any, b: any) => +new Date(b.publishDate) - +new Date(a.publishDate)
+  );
 
   return posts;
 };

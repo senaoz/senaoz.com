@@ -20,7 +20,7 @@ export default function HomePage() {
               </div>
               <ul>
                 {description?.map((i) => (
-                  <li>{i}</li>
+                  <li key={i}>{i}</li>
                 ))}
               </ul>
             </li>

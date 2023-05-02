@@ -10,8 +10,11 @@ const Posts = async () => {
       <div className="container">
         {posts?.map((post) => {
           let date = new Date(post.publishDate);
-          const options = { year: "numeric", month: "long", day: "numeric" };
-          let dateString = date.toLocaleDateString("en-US", options);
+          let dateString = date.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          });
 
           return (
             <Link
