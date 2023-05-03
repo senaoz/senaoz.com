@@ -12,7 +12,7 @@
   --indentation-xl: 32px;
 
   --foreground-rgb: rgb(61, 61, 61);
-  --second-foreground-rgb: rgb(122, 122, 122);
+  --second-foreground-rgb: rgb(87, 87, 87);
   --background: rgb(245, 245, 245);
   --box-color: rgba(232, 232, 232, 0.7);
 }
@@ -135,4 +135,19 @@ nav {
 
 .experience-header {
   padding-bottom: var(--indentation-md);
+}
+
+.contact-icons {
+  display: flex;
+  gap: var(--indentation-lg);
+  padding-top: var(--indentation-sm);
+}
+
+.contact-icons svg {
+  width: var(--indentation-xl);
+  height: var(--indentation-xl);
+}
+
+.contact-icons a {
+  line-height: 1em;
 }
