@@ -136,3 +136,18 @@ nav {
 .experience-header {
   padding-bottom: var(--indentation-md);
 }
+
+.contact-icons {
+  display: flex;
+  gap: var(--indentation-lg);
+  padding-top: var(--indentation-sm);
+}
+
+.contact-icons svg {
+  width: var(--indentation-xl);
+  height: var(--indentation-xl);
+}
+
+.contact-icons a {
+  line-height: 1em;
+}

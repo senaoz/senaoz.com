@@ -1,7 +1,10 @@
 import React from "react";
 import { experience, projects } from "@/resume";
+import { GithubIcon, LinkedinIcon, TelagramIcon } from "../../public/icons";
 
 export default function HomePage() {
+  let fillColor = "rgb(87, 87, 87)";
+
   return (
     <>
       <h1 className="title">Hey 👋 I’m Sena Oz. </h1>
@@ -9,6 +12,19 @@ export default function HomePage() {
         I am a management information systems student at Bogazici University,
         also trying to be a software developer.
       </p>
+
+      <div className="contact-icons">
+        <a href="https://www.linkedin.com/in/zsenaoz/" target="_blank">
+          <LinkedinIcon fill={fillColor} />
+        </a>
+        <a href={"mailto:tazeyta@gmail.com"} target="_blank">
+          <TelagramIcon fill={fillColor} />
+        </a>
+        <a href={"https://github.com/senaoz"} target="_blank">
+          <GithubIcon fill={fillColor} />
+        </a>
+      </div>
+
       <div id="experience">
         <h3 className="subtitle">Experience</h3>
         <ol>
