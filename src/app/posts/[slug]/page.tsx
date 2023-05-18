@@ -12,7 +12,10 @@ interface Meta {
 
 export async function generateMetadata({ params }: { params: Params }) {
   const { meta } = await getPageContent(params.slug);
-  return { title: (meta as Meta).title };
+  return {
+    title: (meta as Meta).title,
+    publishDate: (meta as Meta).publishDate,
+  };
 }
 
 const getPageContent = async (slug: any) => {
@@ -21,9 +24,14 @@ const getPageContent = async (slug: any) => {
 };
 
 const PostPage = async ({ params }: { params: Params }) => {
-  const { content } = await getPageContent(params.slug);
+  const { content, meta } = await getPageContent(params.slug);
 
-  return <div className="content">{content}</div>;
+  return (
+    <div className="content">
+      <time>{meta.publishDate}</time>
+      {content}
+    </div>
+  );
 };
 
 export default PostPage;
