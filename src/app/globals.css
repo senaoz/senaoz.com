@@ -151,3 +151,14 @@ nav {
 .contact-icons a {
   line-height: 1em;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content img {
+  width: 120%;
+  height: auto;
+  align-self: center;
+}
