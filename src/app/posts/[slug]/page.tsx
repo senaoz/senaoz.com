@@ -26,9 +26,16 @@ const getPageContent = async (slug: any) => {
 const PostPage = async ({ params }: { params: Params }) => {
   const { content, meta } = await getPageContent(params.slug);
 
+  let date = new Date(meta.publishDate);
+  let dateString = date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   return (
     <div className="content">
-      <time>{meta.publishDate}</time>
+      <time>{dateString}</time>
       {content}
     </div>
   );
