@@ -50,7 +50,7 @@ export const experience = [
   {
     title: "Web Application Dev., Team Lead",
     firm: "YetGen",
-    timePeriod: "Mar 2021 – Jan 2023",
+    timePeriod: "Mar 2021 – Jan 2023 (1 year 11 months)",
     description: [
       "Converted design assets into component based HTML, CSS, and JavaScript.",
       "Developed and implemented WordPress sites, themes, and plugins.",
@@ -60,6 +60,6 @@ export const experience = [
   {
     title: "Front-end Engineer Intern",
     firm: "Univerlist",
-    timePeriod: "Jul – Aug 2022",
+    timePeriod: "Jul – Aug 2022 (2 months)",
   },
 ];

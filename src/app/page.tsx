@@ -9,8 +9,8 @@ export default function HomePage() {
     <>
       <h1 className="title">Hey 👋 I’m Sena Oz. </h1>
       <p>
-        I am a management information systems student at Bogazici University,
-        also trying to be a software developer.
+        I am a senior management information systems student at Bogazici
+        University, also trying to be a software developer.
       </p>
 
       <div className="contact-icons">
