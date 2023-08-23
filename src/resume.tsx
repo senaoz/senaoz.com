@@ -1,9 +1,14 @@
 export const projects = [
   {
+    label: "Code Feedback and ML Model Training Platform (continues)",
+    description:
+      "In the pipeline, I am working on the development of a cutting-edge online code-running platform using a tech stack that includes ReactJS, Tailwind, and Typescript, seamlessly integrated with the ChatGPT API. What sets this project apart is its innovative approach to gathering invaluable feedback on user-written code, which will be instrumental in refining machine learning models. I'm designing and implementing a robust RestAPI infrastructure with Strapi, ensuring efficient communication between the frontend and backend components. My focus extends to creating a responsive and user-friendly interface, emphasizing UI element design principles. ",
+  },
+  {
     href: "https://rick-and-morty-senaoz.vercel.app/residents/96",
     label: "Cartoon Characters Wiki",
     description:
-      "Developed an app that allows you to explore the characters and locations from Rick and Morty show with JavaScript, NextJs, Tailwind CSS, and React Context, features a responsive design and dark mode support.",
+      "Engineered an application using JavaScript, Next.js, Tailwind CSS, and React Context, offering an immersive exploration of characters and locales within the Rick and Morty universe with responsive design and seamless dark mode functionality.",
     github: "https://github.com/senaoz/rick-and-morty",
   },
   {
@@ -33,18 +38,28 @@ export const projects = [
   {
     label: "Coursera-like System",
     description:
-      "Built a system (WordPress, Airtable, and Moodle) that replaced a solution costing ₺7K/month, and increased course completion rate by 55%.",
+      "Built a system (WordPress, Airtable, and Moodle) that replaced a solution costing ₺10K/month, and increased course completion rate by 55%.",
   },
 ];
 
 export const experience = [
   {
+    title: "Software Developer",
+    firm: "California State University, Silicon Valley Campus",
+    timePeriod: "Aug 2023 – Present",
+    description: [
+      "Developing Interactive Code Feedback and ML Model Training Platform using ReactJS, Tailwind CSS, and TypeScript. Designed and implemented a RESTful API using Strapi.",
+      "Pioneered an approach by integrating the ChatGPT API to provide real-time feedback on code submissions, and collected the data to train and improve the ML model.",
+      "Responsible for the end-to-end web development, including UI/UX design and front-end/backend implementation.",
+    ],
+  },
+  {
     title: "Junior Software Developer (Part-time)",
     firm: "Orion Innovation",
     timePeriod: "Nov 2022 – Present",
     description: [
-      "Resolved issues of core front-end libraries (TypeScript and CSS) used by web and mobile platforms by addressing open tickets.",
-      "Created reusable JavaScript components in React for portals and services.",
+      "Resolved issues and developed new features of company-specific user interface libraries, used by web and mobile platforms by addressing open tickets.",
+      "Created reusable components in React with TypeScript and SCSS for portals.",
     ],
   },
   {
