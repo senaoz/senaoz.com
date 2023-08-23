@@ -33,7 +33,7 @@ export const projects = [
   {
     label: "Coursera-like System",
     description:
-      "Built a system (WordPress, Airtable, and Moodle) that replaced a solution costing ₺7K/month, and increased course completion rate by 55%.",
+      "Built a system (WordPress, Airtable, and Moodle) that replaced a solution costing ₺10K/month, and increased course completion rate by 55%.",
   },
 ];
 
@@ -43,8 +43,8 @@ export const experience = [
     firm: "Orion Innovation",
     timePeriod: "Nov 2022 – Present",
     description: [
-      "Resolved issues of core front-end libraries (TypeScript and CSS) used by web and mobile platforms by addressing open tickets.",
-      "Created reusable JavaScript components in React for portals and services.",
+      "Resolved issues and developed new features of company-specific user interface libraries, used by web and mobile platforms by addressing open tickets.",
+      "Created reusable components in React with TypeScript and SCSS for portals.",
     ],
   },
   {
