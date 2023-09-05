@@ -45,7 +45,7 @@ export const projects = [
 export const experience = [
   {
     title: "Software Developer",
-    firm: "California State University, Silicon Valley Campus",
+    firm: "California State Uni., Silicon Valley Campus",
     timePeriod: "Aug 2023 – Present",
     description: [
       "Developing Interactive Code Feedback and ML Model Training Platform using ReactJS, Tailwind CSS, and TypeScript. Designed and implemented a RESTful API using Strapi.",
