@@ -2,7 +2,6 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import React from "react";
 import Link from "next/link";
-import { useSelectedLayoutSegment } from "next/navigation";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 
@@ -24,11 +23,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  let segment = useSelectedLayoutSegment();
-  if (segment === null) {
-    segment = "";
-  }
-
   return (
     <>
       <html lang="en">
@@ -36,13 +30,7 @@ export default function RootLayout({
           <header>
             <nav>
               {pages.map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className={
-                    "/" + segment === href ? "nav-item active" : "nav-item"
-                  }
-                >
+                <Link key={href} href={href} className={"nav-item"}>
                   {label}
                 </Link>
               ))}
