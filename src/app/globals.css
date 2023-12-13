@@ -1,5 +1,5 @@
 :root {
-  --max-width: 700px;
+  --max-width: 800px;
 
   --border-radius-xsm: 4px;
   --border-radius-sm: 8px;
@@ -15,6 +15,7 @@
   --second-foreground-rgb: rgb(87, 87, 87);
   --background: rgb(245, 245, 245);
   --box-color: rgba(232, 232, 232, 0.7);
+  --yellow: rgb(232, 180, 44);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -140,6 +141,8 @@ nav {
   display: flex;
   gap: var(--indentation-lg);
   padding-top: var(--indentation-sm);
+  align-items: center;
+  text-align: center;
 }
 
 .contact-icons svg {
@@ -160,4 +163,14 @@ nav {
   width: 120%;
   height: auto;
   align-self: center;
+}
+
+.button {
+  background: var(--yellow);
+  color: #1a1a1a;
+  text-decoration: none;
+  border-radius: var(--border-radius-sm);
+  display: inline-block;
+  padding: var(--indentation-sm) var(--indentation-md);
+  line-height: 1.2em !important;
 }

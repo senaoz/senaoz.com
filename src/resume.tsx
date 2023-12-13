@@ -1,6 +1,17 @@
 export const projects = [
   {
-    label: "Code Feedback and ML Model Training Platform (continues)",
+    label: "Forecasting Model in Pharma Product Sales (in progress)",
+    description:
+      "Developing a cutting-edge forecasting model for pharmaceutical product sales using Python. The model will be instrumental in predicting future sales, enabling the company to optimize inventory management and production planning. The project aims to enhance the company's decision-making process, ensuring a more efficient and cost-effective supply chain.",
+  },
+  {
+    label: "House Price Prediction Platform (Model&Frontend)",
+    github: "https://github.com/senaoz/dss-frontend",
+    description:
+      "Created as part of the Decision Support Systems course, the King County house price prediction model addresses distrust in traditional real estate methods prevalent among Americans. The project utilizes real estate market data for King County, employing regression analysis to reveal insights into the factors influencing home prices. By providing data-driven decision support, the model aims to empower homebuyers and bridge the information gap in the King County housing market, fostering a more informed community.",
+  },
+  {
+    label: "Code Feedback and ML Model Training Platform (in progress)",
     description:
       "In the pipeline, I am working on the development of a cutting-edge online code-running platform using a tech stack that includes ReactJS, Tailwind, and Typescript, seamlessly integrated with the ChatGPT API. What sets this project apart is its innovative approach to gathering invaluable feedback on user-written code, which will be instrumental in refining machine learning models. I'm designing and implementing a robust RestAPI infrastructure with Strapi, ensuring efficient communication between the frontend and backend components. My focus extends to creating a responsive and user-friendly interface, emphasizing UI element design principles. ",
   },
@@ -38,7 +49,7 @@ export const projects = [
   {
     label: "Coursera-like System",
     description:
-      "Built a system (WordPress, Airtable, and Moodle) that replaced a solution costing ₺10K/month, and increased course completion rate by 55%.",
+      "Built a system (WordPress, Airtable, and Moodle) that replaced a solution costing 1K usd/month, and increased course completion rate by 55%.",
   },
 ];
 
@@ -46,7 +57,7 @@ export const experience = [
   {
     title: "Software Developer",
     firm: "California State Uni., Silicon Valley Campus",
-    timePeriod: "Aug 2023 – Present",
+    timePeriod: "Aug – Oct 2023 (3 months)",
     description: [
       "Developing Interactive Code Feedback and ML Model Training Platform using ReactJS, Tailwind CSS, and TypeScript. Designed and implemented a RESTful API using Strapi.",
       "Pioneered an approach by integrating the ChatGPT API to provide real-time feedback on code submissions, and collected the data to train and improve the ML model.",
@@ -56,10 +67,11 @@ export const experience = [
   {
     title: "Junior Software Developer (Part-time)",
     firm: "Orion Innovation",
-    timePeriod: "Nov 2022 – Present",
+    timePeriod: "Nov 2022 – Nov 2023 (1 year)",
     description: [
-      "Resolved issues and developed new features of company-specific user interface libraries, used by web and mobile platforms by addressing open tickets.",
       "Created reusable components in React with TypeScript and SCSS for portals.",
+      "Implemented comprehensive test coverage for the developed React components, including screenshot tests for visual regression and unit tests for functionality validation. This ensured the stability and reliability of the user interface libraries, contributing to a more robust and error-resistant codebase.",
+      "Resolved issues and developed new features of company-specific user interface libraries, used by web and mobile platforms by addressing open tickets.",
     ],
   },
   {
@@ -76,5 +88,50 @@ export const experience = [
     title: "Front-end Engineer Intern",
     firm: "Univerlist",
     timePeriod: "Jul – Aug 2022 (2 months)",
+  },
+];
+
+export const skills = [
+  {
+    title: "Languages",
+    list: [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "SwiftUI",
+      "SQL",
+      "HTML",
+      "CSS",
+    ],
+  },
+  {
+    title: "Frameworks",
+    list: ["React", "Next.js", "Tailwind CSS", "Strapi"],
+  },
+  {
+    title: "Tools",
+    list: ["Git", "GitHub", "Jira", "Confluence"],
+  },
+  {
+    title: "Others",
+    list: [
+      "RESTful API",
+      "Agile",
+      "Scrum",
+      "AWS",
+      "Azure",
+      "MySQL",
+      "PostgreSQL",
+    ],
+  },
+  {
+    title: "Interests",
+    list: [
+      "Machine Learning",
+      "Web Development",
+      "UI/UX Design",
+      "Cooking",
+      "Paddling",
+    ],
   },
 ];

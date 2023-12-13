@@ -1,5 +1,5 @@
 import React from "react";
-import { experience, projects } from "@/resume";
+import { experience, projects, skills } from "@/resume";
 import { GithubIcon, LinkedinIcon, TelagramIcon } from "../../public/icons";
 
 export default function HomePage() {
@@ -10,8 +10,8 @@ export default function HomePage() {
       <h1 className="title">Hey 👋 I’m Sena Oz. </h1>
       <p>
         I am a senior management information systems student at Bogazici
-        University and software developer at{" "}
-        <a href="https://www.orioninc.com">Orion Innovation</a>.
+        University and a software developer. I am passionate about building
+        innovative solutions and creating value through technology.
       </p>
 
       <div className="contact-icons">
@@ -23,6 +23,13 @@ export default function HomePage() {
         </a>
         <a href={"https://github.com/senaoz"} target="_blank">
           <GithubIcon fill={fillColor} />
+        </a>
+        <a
+          className="button"
+          href="https://drive.google.com/file/d/1tm7OAPXkyWUXIkelqnVnyqumeQ202GPX/view?usp=share_link"
+          target="_blank"
+        >
+          Resume in PDF format
         </a>
       </div>
 
@@ -80,6 +87,22 @@ export default function HomePage() {
             </li>
           ))}
         </ol>
+      </div>
+      <div id="skills">
+        <h3 className="subtitle">Skills</h3>
+        <>
+          {skills.map(({ title, list }, index) => (
+            <p key={index}>
+              <span className="project-secondary-label">{title}: </span>
+              {list.map((i) => (
+                <span key={i}>
+                  {i}
+                  {list.indexOf(i) !== list.length - 1 ? " - " : ""}
+                </span>
+              ))}
+            </p>
+          ))}
+        </>
       </div>
     </>
   );
