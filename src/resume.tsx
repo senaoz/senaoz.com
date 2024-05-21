@@ -1,8 +1,8 @@
 export const projects = [
   {
-    label: "Forecasting Model in Pharma Product Sales (in progress)",
+    label: "Forecasting Model in Pharma Product Sales",
     description:
-      "Developing a cutting-edge forecasting model for pharmaceutical product sales using Python. The model will be instrumental in predicting future sales, enabling the company to optimize inventory management and production planning. The project aims to enhance the company's decision-making process, ensuring a more efficient and cost-effective supply chain.",
+      "Developed a forecasting model for pharmaceutical product sales using Python. The model will be instrumental in predicting future sales, enabling the company to optimize inventory management and production planning. The project aims to enhance the company's decision-making process, ensuring a more efficient and cost-effective supply chain.",
   },
   {
     label: "House Price Prediction Platform (Model&Frontend)",
@@ -11,9 +11,9 @@ export const projects = [
       "Created as part of the Decision Support Systems course, the King County house price prediction model addresses distrust in traditional real estate methods prevalent among Americans. The project utilizes real estate market data for King County, employing regression analysis to reveal insights into the factors influencing home prices. By providing data-driven decision support, the model aims to empower homebuyers and bridge the information gap in the King County housing market, fostering a more informed community.",
   },
   {
-    label: "Code Feedback and ML Model Training Platform (in progress)",
+    label: "Code Feedback and ML Model Training Platform",
     description:
-      "In the pipeline, I am working on the development of a cutting-edge online code-running platform using a tech stack that includes ReactJS, Tailwind, and Typescript, seamlessly integrated with the ChatGPT API. What sets this project apart is its innovative approach to gathering invaluable feedback on user-written code, which will be instrumental in refining machine learning models. I'm designing and implementing a robust RestAPI infrastructure with Strapi, ensuring efficient communication between the frontend and backend components. My focus extends to creating a responsive and user-friendly interface, emphasizing UI element design principles. ",
+      "In the pipeline, I worked on the development of a cutting-edge online code-running platform using a tech stack that includes ReactJS, Tailwind, and Typescript, seamlessly integrated with the ChatGPT API. What sets this project apart is its innovative approach to gathering invaluable feedback on user-written code, which will be instrumental in refining machine learning models. I designed and implemented a RESTful API using Strapi, ensuring a seamless user experience and robust backend functionality. The project is set to revolutionize the way developers receive feedback on their code, offering real-time insights and enhancing the learning experience.",
   },
   {
     href: "https://rick-and-morty-senaoz.vercel.app/residents/96",
