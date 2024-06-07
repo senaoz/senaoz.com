@@ -42,11 +42,13 @@ export default function HomePage() {
                 <span className="project-label">{firm}</span>, {title}{" "}
                 <span className="project-secondary-label">{timePeriod}</span>
               </div>
-              <ul>
-                {description?.map((i) => (
-                  <li key={i}>{i}</li>
-                ))}
-              </ul>
+              {description && (
+                <ul>
+                  {description.map((i) => (
+                    <li key={i}>{i}</li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ol>

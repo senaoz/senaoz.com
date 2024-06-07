@@ -47,12 +47,17 @@ body {
   padding-bottom: 10vw;
 }
 
+h1 {
+  padding-top: var(--indentation-lg);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
+ul,
 p {
   padding-bottom: var(--indentation-lg);
 }
@@ -63,7 +68,7 @@ time {
 }
 
 ol {
-  gap: var(--indentation-xl);
+  gap: var(--indentation-md);
   display: flex;
   flex-direction: column;
   list-style-type: none;
