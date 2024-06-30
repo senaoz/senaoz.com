@@ -9,9 +9,14 @@ export default function HomePage() {
     <>
       <h1 className="title">Hey 👋 I’m Sena Oz. </h1>
       <p>
-        I am a senior management information systems student at Bogazici
-        University and a software developer. I am passionate about building
-        innovative solutions and creating value through technology.
+        I am a Software Engineer with a passion for building products that make
+        a difference. I am always looking for new opportunities to learn and
+        grow. Having recently graduated from Bogaziçi University, I am currently
+        working as a Software Engineer at{" "}
+        <a href="https://maestra.ai" target="_blank">
+          Maestra.ai
+        </a>
+        .
       </p>
 
       <div className="contact-icons">
