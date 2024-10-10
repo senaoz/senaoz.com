@@ -129,14 +129,4 @@ export const skills = [
       "PostgreSQL",
     ],
   },
-  {
-    title: "Interests",
-    list: [
-      "Machine Learning",
-      "Web Development",
-      "UI/UX Design",
-      "Cooking",
-      "Paddling",
-    ],
-  },
 ];
