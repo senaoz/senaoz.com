@@ -55,6 +55,11 @@ export const projects = [
 
 export const experience = [
   {
+    title: "Software Engineer",
+    firm: "Maestra.ai",
+    timePeriod: "Jul 2024 – Present",
+  },
+  {
     title: "Software Developer",
     firm: "California State Uni., Silicon Valley Campus",
     timePeriod: "Aug – Oct 2023 (3 months)",
