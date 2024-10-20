@@ -16,6 +16,18 @@ export const projects = [
       "In the pipeline, I worked on the development of a cutting-edge online code-running platform using a tech stack that includes ReactJS, Tailwind, and Typescript, seamlessly integrated with the ChatGPT API. What sets this project apart is its innovative approach to gathering invaluable feedback on user-written code, which will be instrumental in refining machine learning models. I designed and implemented a RESTful API using Strapi, ensuring a seamless user experience and robust backend functionality. The project is set to revolutionize the way developers receive feedback on their code, offering real-time insights and enhancing the learning experience.",
   },
   {
+    label: "Covid-19 Tracker Application",
+    description:
+      "Created a user-friendly Covid-19 tracker using React, Redux, Tailwind CSS, and TypeScript. The app provides global and country-specific case data, features an interactive world map, and ensures smooth performance through efficient state management and Docker deployment.",
+    github: "https://github.com/senaoz/covid-tracker",
+  },
+  {
+    label: "Real Estate Scraper",
+    description:
+      "Developed a web scraper that extracts information from a real estate listing website using BeautifulSoup, Pandas, Requests, and Numpy, and saves the extracted data in an excel file.",
+    github: "https://github.com/senaoz/get-sahibinden-record",
+  },
+  {
     href: "https://rick-and-morty-senaoz.vercel.app/residents/96",
     label: "Cartoon Characters Wiki",
     description:
@@ -34,12 +46,6 @@ export const projects = [
     description:
       "Built a modern weather app with smart features such as auto-location detection (using browser API), smart city suggestions (keyword auto-complete) that dynamically loads the page with a responsive design and dark mode support. Used React.Js, Tailwind CSS, and OpenWeatherMap API.",
     github: "https://github.com/senaoz/Weather-App",
-  },
-  {
-    label: "Real Estate Scraper",
-    description:
-      "Developed a web scraper that extracts information from a real estate listing website using BeautifulSoup, Pandas, Requests, and Numpy, and saves the extracted data in an excel file.",
-    github: "https://github.com/senaoz/get-sahibinden-record",
   },
   {
     label: "Find My ID",
@@ -105,13 +111,14 @@ export const skills = [
       "Python",
       "SwiftUI",
       "SQL",
+      "NodeJS",
       "HTML",
       "CSS",
     ],
   },
   {
-    title: "Frameworks",
-    list: ["React", "Next.js", "Tailwind CSS", "Strapi"],
+    title: "Frameworks/Libraries",
+    list: ["Cypress,", "React", "Next.js", "StoryBook", "Strapi"],
   },
   {
     title: "Tools",
