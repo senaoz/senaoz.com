@@ -41,21 +41,23 @@ export default function HomePage() {
       <div id="experience">
         <h3 className="subtitle">Experience</h3>
         <ol>
-          {experience.map(({ title, firm, timePeriod, description }, index) => (
-            <li key={index}>
-              <div className="experience-header">
-                <span className="project-label">{firm}</span>, {title}{" "}
-                <span className="project-secondary-label">{timePeriod}</span>
-              </div>
-              {description && (
-                <ul>
-                  {description.map((i) => (
-                    <li key={i}>{i}</li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
+          {experience.map(
+            ({ title, firm, timePeriod, description, link }, index) => (
+              <li key={index}>
+                <a className="experience-header" href={link} target={"_blank"}>
+                  <span className="project-label">{firm}</span>, {title}{" "}
+                  <span className="project-secondary-label">{timePeriod}</span>
+                </a>
+                {description && (
+                  <ul>
+                    {description.map((i) => (
+                      <li key={i}>{i}</li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            )
+          )}
         </ol>
       </div>
 

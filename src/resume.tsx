@@ -64,11 +64,13 @@ export const experience = [
     title: "Software Engineer",
     firm: "Maestra.ai",
     timePeriod: "Jul 2024 – Present",
+    link: "https://maestra.ai/tools/video-dubber",
   },
   {
     title: "Software Developer",
     firm: "California State Uni., Silicon Valley Campus",
     timePeriod: "Aug – Oct 2023 (3 months)",
+    link: "https://www.sjsu.edu/",
     description: [
       "Developing Interactive Code Feedback and ML Model Training Platform using ReactJS, Tailwind CSS, and TypeScript. Designed and implemented a RESTful API using Strapi.",
       "Pioneered an approach by integrating the ChatGPT API to provide real-time feedback on code submissions, and collected the data to train and improve the ML model.",
@@ -78,6 +80,7 @@ export const experience = [
   {
     title: "Junior Software Developer (Part-time)",
     firm: "Orion Innovation",
+    link: "https://www.orioninc.com/",
     timePeriod: "Nov 2022 – Nov 2023 (1 year)",
     description: [
       "Created reusable components in React with TypeScript and SCSS for portals.",
@@ -88,6 +91,7 @@ export const experience = [
   {
     title: "Web Application Dev., Team Lead",
     firm: "YetGen",
+    link: "https://yetkingencler.com/",
     timePeriod: "Mar 2021 – Jan 2023 (1 year 11 months)",
     description: [
       "Converted design assets into component based HTML, CSS, and JavaScript.",
@@ -98,6 +102,7 @@ export const experience = [
   {
     title: "Front-end Engineer Intern",
     firm: "Univerlist",
+    link: "https://univerlist.com/",
     timePeriod: "Jul – Aug 2022 (2 months)",
   },
 ];
