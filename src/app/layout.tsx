@@ -10,7 +10,7 @@ const inter = Inter({ weight: ["400", "700"], subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Sena Oz",
   description:
-    "I am a Software Engineer passionate about creating impactful products. Always eager to learn and grow, I earned a Bachelor's degree in MIS from Bogaziçi University and pursued a Master's in Software Engineering.",
+    "I am a Software Engineer passionate about creating impactful products.",
 };
 
 const pages: { href: string; label: string }[] = [

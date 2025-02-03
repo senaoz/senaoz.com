@@ -10,9 +10,9 @@ export default function HomePage() {
       <h1 className="title">Hey 👋 I’m Sena Oz. </h1>
       <p>
         I am a Software Engineer passionate about creating impactful products.
-        Always eager to learn and grow, I earned a Bachelor&apos;s degree in
-        Management Information Systems (MIS) from Bogazici University and
-        pursued a Master&apos;s in Software Engineering. Currently, I work at{" "}
+        Always eager to learn and grow, I earned a Bachelor&apos;s degree in MIS
+        from Bogazici University and pursued a Master&apos;s in Software
+        Engineering. Currently, I work at{" "}
         <a href="https://maestra.ai" target="_blank">
           Maestra.ai
         </a>
