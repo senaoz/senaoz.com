@@ -6,9 +6,8 @@ publishDate: '2025, 11, 12'
 # Can We Really Trust AI-Generated Code?
 
 Everyone’s asking whether AI will replace developers.  
-After spending a semester researching large language models (LLMs) for code generation, I realized that’s the wrong question.
 
-The real question is: **can we trust the code these models produce?**
+After spending a semester researching large language models (LLMs) for code generation, I realized that the real question is: **can we trust the code these models produce?**
 
 And the answer depends entirely on what you mean by *trust*.
 
