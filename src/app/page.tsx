@@ -29,6 +29,7 @@ export default function HomePage() {
         <a href={"https://github.com/senaoz"} target="_blank">
           <GithubIcon fill={fillColor} />
         </a>
+        {/*
         <a
           className="button"
           href="https://drive.google.com/file/d/1tm7OAPXkyWUXIkelqnVnyqumeQ202GPX/view?usp=share_link"
@@ -36,6 +37,7 @@ export default function HomePage() {
         >
           Resume in PDF format
         </a>
+          */}
       </div>
 
       <div id="experience">
