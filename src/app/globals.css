@@ -197,6 +197,10 @@ nav {
   align-self: center;
 }
 
+.content ul, .content ol {
+  padding-left: var(--indentation-lg);
+}
+
 .button {
   background: var(--yellow);
   color: #1a1a1a;
