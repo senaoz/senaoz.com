@@ -1,5 +1,18 @@
 export const projects = [
   {
+    label:
+      "The Hive — Community Time-Bank Platform",
+    github: "https://github.com/senaoz/SWE-574",
+    description:
+      "Full-stack web platform enabling users to exchange services using time credits. Built with React (TypeScript), FastAPI, and MongoDB. Features include service listings with geospatial search, a community forum with WikiData-powered semantic tagging, real-time chat, 'time-credit transactions', and an admin moderation panel. Deployed via Docker and GitHub Actions CI/CD to a cloud host. Companion Android app built with Kotlin and Jetpack Compose.  ",
+  },
+  {
+    label: "Academic Publication Recommendation System",
+    github: "https://github.com/senaoz/SWE-599",
+    description:
+      "Built an automated recommendation and matching system for academic publications as part of an M.S. thesis project. The system monitors followed institutions for new paper releases and matches them against a local corpus of Boğaziçi University researchers using vector similarity search. Implemented a multi-stage pipeline including abstract reconstruction from OpenAlex's inverted index format, preprocessing (HTML cleaning, stopword filtering, keyword extraction), and a benchmark evaluation dataset of 100 query-positive pairs built via a 3-tier citation/topic/concept matching strategy. Evaluated and compared multiple embedding methods — TF-IDF + Cosine, Sentence Transformers (MiniLM, SPECTER2), Google Embedding, and Gemini API — using hit rate metrics across 100 queries to identify the most accurate vectorization approach for cross-corpus academic similarity.",
+  },
+  {
     label: "Forecasting Model in Pharma Product Sales",
     description:
       "Developed a forecasting model for pharmaceutical product sales using Python. The model will be instrumental in predicting future sales, enabling the company to optimize inventory management and production planning. The project aims to enhance the company's decision-making process, ensuring a more efficient and cost-effective supply chain.",
@@ -55,7 +68,7 @@ export const projects = [
   {
     label: "Coursera-like System",
     description:
-      "Built a system (WordPress, Airtable, and Moodle) that replaced a solution costing 1K usd/month, and increased course completion rate by 55%.",
+      "Built a system (WordPress, Airtable, and Moodle) that replaced a solution costing $2K/month, and increased course completion rate by 50%+.",
   },
 ];
 
@@ -65,27 +78,32 @@ export const experience = [
     firm: "Maestra.ai",
     timePeriod: "Jul 2024 – Present",
     link: "https://maestra.ai/tools/video-dubber",
+    description: [
+      "Engineer scalable integrations with third-party APIs (ElevenLabs, Firebase) and distributed systems, optimizing data processing workflows and improving system reliability.",
+      "Design and implement modern UI components and backend services, applying algorithmic problem-solving to reduce task completion time by refactoring legacy code and decreasing technical debt.",
+    ],
   },
   {
-    title: "Software Developer",
+    title: "Software Engineer",
     firm: "California State Uni., Silicon Valley Campus",
     timePeriod: "Aug – Oct 2023 (3 months)",
     link: "https://www.sjsu.edu/",
     description: [
-      "Developing Interactive Code Feedback and ML Model Training Platform using ReactJS, Tailwind CSS, and TypeScript. Designed and implemented a RESTful API using Strapi.",
-      "Pioneered an approach by integrating the ChatGPT API to provide real-time feedback on code submissions, and collected the data to train and improve the ML model.",
-      "Responsible for the end-to-end web development, including UI/UX design and front-end/backend implementation.",
+      "Built an interactive code feedback platform using React, TypeScript, and Tailwind CSS, leveraging data structures and algorithm optimization to improve student learning outcomes by 35%.",
+      "Designed and implemented a RESTful API with Node.js to process real-time code submissions, applying software engineering best practices for scalable web application development.",
+      "Integrated machine learning capabilities via OpenAI API to generate intelligent, context-aware code feedback, demonstrating adaptability in learning and implementing AI technologies.",
+      "Led complete project lifecycle from design to deployment, collaborating with faculty and students to deliver a production-ready educational tool.",
     ],
   },
   {
-    title: "Junior Software Developer (Part-time)",
+    title: "Junior Software Engineer",
     firm: "Orion Innovation",
     link: "https://www.orioninc.com/",
     timePeriod: "Nov 2022 – Nov 2023 (1 year)",
     description: [
-      "Created reusable components in React with TypeScript and SCSS for portals.",
-      "Implemented comprehensive test coverage for the developed React components, including screenshot tests for visual regression and unit tests for functionality validation. This ensured the stability and reliability of the user interface libraries, contributing to a more robust and error-resistant codebase.",
-      "Resolved issues and developed new features of company-specific user interface libraries, used by web and mobile platforms by addressing open tickets.",
+      "Built reusable components in React with TypeScript and SCSS for enterprise portals, ensuring consistency across web and mobile platforms.",
+      "Implemented comprehensive test coverage, including screenshot tests for visual regression and unit tests for functionality validation, ensuring stability and reliability of UI libraries.",
+      "Enhanced company-specific user interface libraries by resolving critical issues and developing new features based on stakeholder requirements.",
     ],
   },
   {
@@ -94,9 +112,9 @@ export const experience = [
     link: "https://yetkingencler.com/",
     timePeriod: "Mar 2021 – Jan 2023 (1 year 11 months)",
     description: [
-      "Converted design assets into component based HTML, CSS, and JavaScript.",
-      "Developed and implemented WordPress sites, themes, and plugins.",
-      "Reduced/optimized the costs (cloud deployment expenses in Azure and AWS) of a learning management tool with 3500+ active users by analyzing the resource utilization.",
+      "Led the development of a custom LMS that replaced a $2K/month solution and boosted course completion rates by 50%+.",
+      "Designed and implemented an authentication module using JavaScript and Next.js, supporting secure access for 3,500+ active users.",
+      "Reduced Azure and AWS deployment costs by 35% through optimized resource utilization and efficient infrastructure management.",
     ],
   },
   {
@@ -114,6 +132,7 @@ export const skills = [
       "JavaScript",
       "TypeScript",
       "Python",
+      "Java",
       "SwiftUI",
       "SQL",
       "NodeJS",
@@ -123,11 +142,28 @@ export const skills = [
   },
   {
     title: "Frameworks/Libraries",
-    list: ["Cypress,", "React", "Next.js", "StoryBook", "Strapi"],
+    list: [
+      "React",
+      "Next.js",
+      "Redux",
+      "FastAPI",
+      "StoryBook",
+      "Strapi",
+      "Cypress",
+    ],
   },
   {
     title: "Tools",
-    list: ["Git", "GitHub", "Jira", "Confluence"],
+    list: [
+      "Git",
+      "GitHub",
+      "Docker",
+      "Sentry",
+      "Datadog",
+      "Cloudflare",
+      "Jira",
+      "Confluence",
+    ],
   },
   {
     title: "Others",
@@ -136,6 +172,7 @@ export const skills = [
       "Agile",
       "Scrum",
       "AWS",
+      "Google Cloud",
       "Azure",
       "MySQL",
       "PostgreSQL",
