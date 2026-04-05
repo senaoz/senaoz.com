@@ -81,7 +81,7 @@ export default function HomePage() {
                 <span className="project-label">{label}</span>
               )}{" "}
               &nbsp;
-              <span>{description}</span>
+              <span className="project-description">{description}</span>
               {github && (
                 <>
                   {" "}

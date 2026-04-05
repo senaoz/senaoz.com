@@ -1,5 +1,5 @@
 :root {
-  --max-width: 800px;
+  --max-width: 1000px;
 
   --border-radius-xsm: 4px;
   --border-radius-sm: 8px;
@@ -166,6 +166,10 @@ nav {
 }
 
 #projects .project-label:hover {
+  opacity: 0.8;
+}
+
+.project-description {
   opacity: 0.8;
 }
 
