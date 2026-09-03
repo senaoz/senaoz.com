@@ -2,17 +2,23 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { formatDate, getAllPostsMeta } from "../../../lib/mdx";
 
+const postsDescription =
+  "Writing on software engineering, AI-assisted development, and life as a student developer.";
+
 export const metadata: Metadata = {
   title: "Posts",
-  description:
-    "Writing on software engineering, AI-assisted development, and life as a student developer.",
+  description: postsDescription,
   alternates: { canonical: "/posts" },
   openGraph: {
     type: "website",
     url: "/posts",
     title: "Posts",
-    description:
-      "Writing on software engineering, AI-assisted development, and life as a student developer.",
+    description: postsDescription,
+  },
+  twitter: {
+    card: "summary",
+    title: "Posts",
+    description: postsDescription,
   },
 };
 

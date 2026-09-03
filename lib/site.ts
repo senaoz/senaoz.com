@@ -6,6 +6,8 @@ export const siteUrl = (
 
 export const siteName = "Sena Oz";
 
+export const siteTitle = "Sena Oz";
+
 export const siteDescription =
   "I am a Software Engineer passionate about creating impactful products.";
 

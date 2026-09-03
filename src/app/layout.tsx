@@ -4,14 +4,19 @@ import React from "react";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
-import { siteDescription, siteName, siteUrl } from "../../lib/site";
+import {
+  siteDescription,
+  siteName,
+  siteTitle,
+  siteUrl,
+} from "../../lib/site";
 
 const inter = Inter({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${siteName}`,
+    default: siteTitle,
     template: `%s | ${siteName}`,
   },
   description: siteDescription,
@@ -21,12 +26,12 @@ export const metadata: Metadata = {
     siteName,
     locale: "en_US",
     url: "/",
-    title: `${siteName}`,
+    title: siteTitle,
     description: siteDescription,
   },
   twitter: {
     card: "summary",
-    title: `${siteName}`,
+    title: siteTitle,
     description: siteDescription,
   },
   robots: {
