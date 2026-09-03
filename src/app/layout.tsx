@@ -4,13 +4,35 @@ import React from "react";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
+import { siteDescription, siteName, siteUrl } from "../../lib/site";
 
 const inter = Inter({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sena Oz",
-  description:
-    "I am a Software Engineer passionate about creating impactful products.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${siteName}`,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName,
+    locale: "en_US",
+    url: "/",
+    title: `${siteName}`,
+    description: siteDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteName}`,
+    description: siteDescription,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const pages: { href: string; label: string }[] = [
@@ -24,22 +46,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      <html lang="en">
-        <body className={inter.className}>
-          <header>
-            <nav>
-              {pages.map(({ href, label }) => (
-                <Link key={href} href={href} className={"nav-item"}>
-                  {label}
-                </Link>
-              ))}
-            </nav>
-          </header>
-          <main>{children}</main>
-        </body>
-      </html>
-      <Analytics />
-    </>
+    <html lang="en">
+      <body className={inter.className}>
+        <header>
+          <nav>
+            {pages.map(({ href, label }) => (
+              <Link key={href} href={href} className={"nav-item"}>
+                {label}
+              </Link>
+            ))}
+          </nav>
+        </header>
+        <main>{children}</main>
+        <Analytics />
+      </body>
+    </html>
   );
 }

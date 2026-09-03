@@ -1,41 +1,52 @@
-import { getPostBySlug } from "../../../../lib/mdx";
+import { Metadata } from "next";
+import {
+  formatDate,
+  getPostBySlug,
+  getPostSlugs,
+} from "../../../../lib/mdx";
+import { siteName } from "../../../../lib/site";
 
 interface Params {
-  slug?: string;
+  slug: string;
 }
 
-interface Meta {
-  slug?: string;
-  title?: string;
-  publishDate?: string | Date;
-}
+export const generateStaticParams = async () =>
+  getPostSlugs().map((slug) => ({ slug }));
 
-export async function generateMetadata({ params }: { params: Params }) {
-  const { meta } = await getPageContent(params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
+  const { meta } = await getPostBySlug(params.slug);
+  const url = `/posts/${meta.slug}`;
+
   return {
-    title: (meta as Meta).title,
-    publishDate: (meta as Meta).publishDate,
+    title: meta.title,
+    description: meta.description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      url,
+      title: meta.title,
+      description: meta.description,
+      publishedTime: new Date(meta.publishDate).toISOString(),
+      authors: [siteName],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+    },
   };
 }
 
-const getPageContent = async (slug: any) => {
-  const { meta, content } = await getPostBySlug(slug);
-  return { meta, content };
-};
-
 const PostPage = async ({ params }: { params: Params }) => {
-  const { content, meta } = await getPageContent(params.slug);
-
-  let date = new Date(meta.publishDate);
-  let dateString = date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  const { content, meta } = await getPostBySlug(params.slug);
 
   return (
     <div className="content">
-      <time>{dateString}</time>
+      <time dateTime={meta.publishDate}>{formatDate(meta.publishDate)}</time>
       {content}
     </div>
   );

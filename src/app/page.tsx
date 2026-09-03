@@ -1,6 +1,6 @@
 import React from "react";
 import { experience, projects, skills } from "@/resume";
-import { GithubIcon, LinkedinIcon, TelagramIcon } from "../../public/icons";
+import { GithubIcon, LinkedinIcon, TelagramIcon } from "@/components/icons";
 
 export default function HomePage() {
   let fillColor = "rgb(87, 87, 87)";
