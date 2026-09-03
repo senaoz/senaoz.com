@@ -5,6 +5,8 @@ import {
   getPostSlugs,
 } from "../../../../lib/mdx";
 import { siteName } from "../../../../lib/site";
+import { blogPostingSchema } from "../../../../lib/schema";
+import { JsonLd } from "@/components/json-ld";
 
 interface Params {
   slug: string;
@@ -46,6 +48,7 @@ const PostPage = async ({ params }: { params: Params }) => {
 
   return (
     <div className="content">
+      <JsonLd data={blogPostingSchema(meta)} />
       <time dateTime={meta.publishDate}>{formatDate(meta.publishDate)}</time>
       {content}
     </div>

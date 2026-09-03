@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { formatDate, getAllPostsMeta } from "../../../lib/mdx";
+import { blogSchema } from "../../../lib/schema";
+import { JsonLd } from "@/components/json-ld";
 
 const postsDescription =
   "Writing on software engineering, AI-assisted development, and life as a student developer.";
@@ -27,6 +29,7 @@ const Posts = () => {
 
   return (
     <>
+      <JsonLd data={blogSchema(posts)} />
       <h1 className="title">Posts</h1>
       <div className="container">
         {posts?.map((post) => (

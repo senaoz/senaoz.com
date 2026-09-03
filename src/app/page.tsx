@@ -1,12 +1,15 @@
 import React from "react";
 import { experience, projects, skills } from "@/resume";
 import { GithubIcon, LinkedinIcon, TelagramIcon } from "@/components/icons";
+import { JsonLd } from "@/components/json-ld";
+import { personSchema } from "../../lib/schema";
 
 export default function HomePage() {
   let fillColor = "rgb(87, 87, 87)";
 
   return (
     <>
+      <JsonLd data={personSchema} />
       <h1 className="title">Hey 👋 I’m Sena Oz. </h1>
       <p>
         I am a Software Engineer passionate about creating impactful products.
