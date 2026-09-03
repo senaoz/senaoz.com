@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: postsDescription,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Posts",
     description: postsDescription,
   },
@@ -40,12 +40,12 @@ const Posts = () => {
               textDecoration: "none",
             }}
           >
-            <div className="post">
+            <article className="post">
               <time dateTime={post.publishDate}>
                 {formatDate(post.publishDate)}
               </time>
-              <h3 style={{ paddingBottom: 0 }}>{post.title}</h3>
-            </div>
+              <h2 style={{ paddingBottom: 0 }}>{post.title}</h2>
+            </article>
           </Link>
         ))}
       </div>

@@ -16,40 +16,40 @@ export default function HomePage() {
         Always eager to learn and grow, I earned a Bachelor&apos;s degree in MIS
         from Bogazici University and pursued a Master&apos;s in Software
         Engineering. Currently, I work at{" "}
-        <a href="https://maestra.ai" target="_blank">
+        <a href="https://maestra.ai" target="_blank" rel="noopener noreferrer">
           Maestra.ai
         </a>
         , contributing to innovative solutions.
       </p>
 
       <div className="contact-icons">
-        <a href="https://www.linkedin.com/in/zsenaoz/" target="_blank">
+        <a href="https://www.linkedin.com/in/zsenaoz/" target="_blank" rel="noopener noreferrer">
           <LinkedinIcon fill={fillColor} />
         </a>
-        <a href={"mailto:tazeyta@gmail.com"} target="_blank">
+        <a href={"mailto:tazeyta@gmail.com"} target="_blank" rel="noopener noreferrer">
           <TelagramIcon fill={fillColor} />
         </a>
-        <a href={"https://github.com/senaoz"} target="_blank">
+        <a href={"https://github.com/senaoz"} target="_blank" rel="noopener noreferrer">
           <GithubIcon fill={fillColor} />
         </a>
         {/*
         <a
           className="button"
           href="https://drive.google.com/file/d/1tm7OAPXkyWUXIkelqnVnyqumeQ202GPX/view?usp=share_link"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
           Resume in PDF format
         </a>
           */}
       </div>
 
-      <div id="experience">
-        <h3 className="subtitle">Experience</h3>
+      <section id="experience" aria-labelledby="experience-heading">
+        <h2 className="subtitle" id="experience-heading">Experience</h2>
         <ol>
           {experience.map(
             ({ title, firm, timePeriod, description, link }, index) => (
               <li key={index}>
-                <a className="experience-header" href={link} target={"_blank"}>
+                <a className="experience-header" href={link} target="_blank" rel="noopener noreferrer">
                   <span className="project-label">{firm}</span>, {title}{" "}
                   <span className="project-secondary-label">{timePeriod}</span>
                 </a>
@@ -64,17 +64,17 @@ export default function HomePage() {
             )
           )}
         </ol>
-      </div>
+      </section>
 
-      <div id="projects">
-        <h3 className="subtitle">Projects</h3>
+      <section id="projects" aria-labelledby="projects-heading">
+        <h2 className="subtitle" id="projects-heading">Projects</h2>
         <ol>
           {projects.map(({ href, label, description, github }, index) => (
             <li key={index}>
               {href ? (
                 <a
                   href={href}
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   key={index}
                   className="project-label"
                 >
@@ -91,7 +91,7 @@ export default function HomePage() {
                   &nbsp;
                   <a
                     href={github}
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     className="project-secondary-label"
                   >
                     (Github)
@@ -101,9 +101,9 @@ export default function HomePage() {
             </li>
           ))}
         </ol>
-      </div>
-      <div id="skills">
-        <h3 className="subtitle">Skills</h3>
+      </section>
+      <section id="skills" aria-labelledby="skills-heading">
+        <h2 className="subtitle" id="skills-heading">Skills</h2>
         <>
           {skills.map(({ title, list }, index) => (
             <p key={index}>
@@ -117,7 +117,7 @@ export default function HomePage() {
             </p>
           ))}
         </>
-      </div>
+      </section>
     </>
   );
 }

@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import { compileMDX } from "next-mdx-remote/rsc";
+import { mdxComponents } from "@/components/mdx-components";
 
 const rootDirectory = path.join(process.cwd(), "src", "content");
 
@@ -44,6 +45,7 @@ export const getPostBySlug = async (slug: string) => {
   const { frontmatter, content } = await compileMDX({
     source,
     options: { parseFrontmatter: true },
+    components: mdxComponents,
   });
 
   return { meta: { ...frontmatter, slug: realSlug } as Meta, content };

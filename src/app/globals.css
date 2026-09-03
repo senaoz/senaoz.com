@@ -103,6 +103,12 @@ nav {
   font-weight: normal;
 }
 
+/* keep the h2 sections at their previous h3 size */
+.subtitle,
+.post h2 {
+  font-size: 1.17em;
+}
+
 .container {
   display: flex;
   flex-direction: column;
