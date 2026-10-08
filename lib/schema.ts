@@ -21,6 +21,17 @@ export const personSchema = {
   sameAs: socialLinks,
 };
 
+export const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  name: siteName,
+  alternateName: ["Sena Öz", "senaoz"],
+  url: `${siteUrl}/`,
+  inLanguage: "en",
+  publisher: { "@id": personId },
+};
+
 const author = { "@type": "Person", "@id": personId, name: siteName };
 
 export const blogSchema = (posts: Meta[]) => ({
