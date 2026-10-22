@@ -87,7 +87,7 @@ export const experience = [
   {
     title: "Software Engineer",
     firm: "California State Uni., Silicon Valley Campus",
-    timePeriod: "Aug – Oct 2023 (3 months)",
+    timePeriod: "Aug – Oct 2023",
     link: "https://www.sjsu.edu/",
     description: [
       "Built an interactive code feedback platform using React, TypeScript, and Tailwind CSS, leveraging data structures and algorithm optimization to improve student learning outcomes by 35%.",
@@ -100,7 +100,7 @@ export const experience = [
     title: "Junior Software Engineer",
     firm: "Orion Innovation",
     link: "https://www.orioninc.com/",
-    timePeriod: "Nov 2022 – Nov 2023 (1 year)",
+    timePeriod: "Nov 2022 – Nov 2023",
     description: [
       "Built reusable components in React with TypeScript and SCSS for enterprise portals, ensuring consistency across web and mobile platforms.",
       "Implemented comprehensive test coverage, including screenshot tests for visual regression and unit tests for functionality validation, ensuring stability and reliability of UI libraries.",
@@ -111,7 +111,7 @@ export const experience = [
     title: "Web Application Dev., Team Lead",
     firm: "YetGen",
     link: "https://yetkingencler.com/",
-    timePeriod: "Mar 2021 – Jan 2023 (1 year 11 months)",
+    timePeriod: "Mar 2021 – Jan 2023",
     description: [
       "Led the development of a custom LMS that replaced a $2K/month solution and boosted course completion rates by 50%+.",
       "Designed and implemented an authentication module using JavaScript and Next.js, supporting secure access for 3,500+ active users.",
@@ -122,7 +122,7 @@ export const experience = [
     title: "Front-end Engineer Intern",
     firm: "Univerlist",
     link: "https://univerlist.com/",
-    timePeriod: "Jul – Aug 2022 (2 months)",
+    timePeriod: "Jul – Aug 2022",
   },
 ];
 
