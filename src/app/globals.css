@@ -281,12 +281,6 @@ nav {
   border-color: var(--yellow);
 }
 
-.project-description {
-  padding-top: var(--indentation-xsm);
-  color: var(--second-foreground-rgb);
-  font-size: 0.95em;
-}
-
 .project-links {
   display: flex;
   gap: var(--indentation-lg);

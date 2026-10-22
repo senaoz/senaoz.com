@@ -71,7 +71,11 @@ export default function HomePage() {
           {projects.map(({ href, label, description, github }) => (
             <li key={label} className="project-card">
               <h3 className="item-title">{label}</h3>
-              <p className="project-description">{description}</p>
+              <ul className="item-points">
+                {description.map((i) => (
+                  <li key={i}>{i}</li>
+                ))}
+              </ul>
               {(href || github) && (
                 <div className="project-links">
                   {href && (
