@@ -1,4 +1,11 @@
-export const projects = [
+type Project = {
+  label: string;
+  description: string;
+  href?: string;
+  github?: string;
+};
+
+export const projects: Project[] = [
   {
     label:
       "The Hive — Community Time-Bank Platform",
@@ -42,24 +49,10 @@ export const projects = [
     github: "https://github.com/senaoz/get-sahibinden-record",
   },
   {
-    href: "https://rick-and-morty-senaoz.vercel.app/residents/96",
-    label: "Cartoon Characters Wiki",
-    description:
-      "Engineered an application using JavaScript, Next.js, Tailwind CSS, and React Context, offering an immersive exploration of characters and locales within the Rick and Morty universe with responsive design and seamless dark mode functionality.",
-    github: "https://github.com/senaoz/rick-and-morty",
-  },
-  {
     label: "Course Registration System",
     description:
       "Developed a web-based course registration system using vanilla JavaScript, PHP, and MySQL.",
     github: "https://github.com/senaoz/Registration-Management-System",
-  },
-  {
-    href: "https://weather-app-senaoz.vercel.app/",
-    label: "Weather App",
-    description:
-      "Built a modern weather app with smart features such as auto-location detection (using browser API), smart city suggestions (keyword auto-complete) that dynamically loads the page with a responsive design and dark mode support. Used React.Js, Tailwind CSS, and OpenWeatherMap API.",
-    github: "https://github.com/senaoz/Weather-App",
   },
   {
     label: "Find My ID",
