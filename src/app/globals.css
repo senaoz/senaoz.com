@@ -361,6 +361,25 @@ nav {
   align-self: center;
 }
 
+.content .caption {
+  color: var(--second-foreground-rgb);
+  font-size: 0.85em;
+  text-align: center;
+  padding-top: var(--indentation-sm);
+}
+
+.content blockquote {
+  margin-bottom: var(--indentation-lg);
+  padding: var(--indentation-md) var(--indentation-lg);
+  border-left: 3px solid var(--yellow);
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  background: var(--box-color);
+}
+
+.content blockquote p {
+  padding-bottom: 0;
+}
+
 .content ul, .content ol {
   padding-left: var(--indentation-lg);
 }

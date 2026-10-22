@@ -1,0 +1,103 @@
+---
+title: "Scholar Radar: Matching New Papers to the Researchers Who Work on Them"
+publishDate: "2026-10-22"
+description: "How my graduate project at Boğaziçi University finds new papers from followed institutions and lists the Boğaziçi researchers who work on each topic, and why it ended up with no LLM stage."
+---
+
+# Scholar Radar: Matching New Papers to the Researchers Who Work on Them
+
+Researchers miss relevant work from institutions they don't routinely follow. A new paper from MIT or Google DeepMind might be exactly on someone's topic at Boğaziçi University, and nobody there notices it for months.
+
+For my graduate research project, I built **[Scholar Radar](https://github.com/senaoz/SWE-599)** to close that gap. It watches institutions on OpenAlex for new papers and, under each paper, lists the Boğaziçi researchers who work on its topic.
+
+This post walks through how it works: what the app does, how a paper gets matched to people, and the research that decided its final design.
+
+<PostImage src="/images/scholar-radar/system-overview.svg" alt="Overview of the whole SWE-599 project: the first benchmark and its audit, the rebuilt leak-free benchmark, local models, the full-corpus phase, the human-label evaluation, and the deployed app with its embedding-only matching." />
+
+<p className="caption">The whole project on one page, from the first benchmark to the deployed app. <a href="/images/scholar-radar/system-overview.svg" target="_blank" rel="noopener noreferrer">Open full size ↗</a></p>
+
+## What the app does
+
+The idea is simple from the user's side:
+
+- **Follow institutions.** Any institution in [OpenAlex](https://openalex.org) can be followed. MIT, Stanford, Harvard, UC Berkeley, U. Michigan, Google and Google DeepMind are suggested to start with.
+- **Collect new papers.** Every six hours, a background job fetches new papers from the followed institutions.
+- **See who works on each one.** Under every paper, the app lists Boğaziçi researchers whose own work is closest to it, along with the specific work they were matched through.
+- **For me.** You pick your favourite Boğaziçi researchers (yourself included), and this page shows new papers close to their work.
+- **Explore.** All new papers from the followed institutions, filterable by field, date and match level.
+- **Feedback.** Under each match you can answer _"Works on this topic?"_ with Yes, Partly or No.
+
+## How a paper gets matched to people
+
+The core of the system is a single comparison: how close is a new paper to each thing Boğaziçi researchers have written?
+
+**1. The Boğaziçi index.** I built a cleaned dataset of **7,822 works** by **3,648 Boğaziçi researchers** from OpenAlex. Each work is turned into a vector with **Qwen3-Embedding-8B**, using its title and abstract, and stored in PostgreSQL with pgvector. Every vector is saved with the exact model version that produced it.
+
+**2. The new paper.** When a paper arrives from a followed institution, it is embedded the same way, with the same model and the same text template. Using the same setup on both sides matters; otherwise the vectors are not comparable.
+
+**3. The search.** The app finds the Boğaziçi works closest to the new paper by cosine similarity. The vectors have 4,096 dimensions, which is too many for pgvector's approximate indexes, but with under 8,000 works an exact search is fast enough.
+
+**4. From works to researchers.** The matched works are grouped by author, and each researcher is scored by their single best-matching work. The app shows the top researchers, each with the work that explains the match.
+
+**5. Match levels.** Matches are labelled **Strong**, **Likely** or **Weak**. These are bands of the similarity score, not probabilities, and the exact value is shown in a tooltip.
+
+Feedback answers are stored together with the score, the rank and the model version the user saw. They are not used for matching yet, but they are the only direct signal of whether a match was actually right, so they are what a future version can be evaluated on.
+
+## Inside the app
+
+Scholar Radar is a full-stack app, and most of the work outside the research went into making the matching reliable.
+
+**Architecture.**
+
+- A **React and TypeScript** frontend with four main pages: For me, Explore, Institutions and Admin.
+- A **FastAPI** backend with JWT authentication and endpoints for institutions, papers, researchers, feedback and admin tasks.
+- A scheduled **matching job** that fetches new papers from OpenAlex every six hours, embeds them and stores the matches.
+- **PostgreSQL with pgvector**, holding the Boğaziçi works, their vectors, the matches and the feedback.
+- A local **llama.cpp** server that runs Qwen3-Embedding-8B, so no paper text leaves the machine.
+- **Docker Compose** for both local development and production, where the frontend is served by nginx.
+
+**Getting the Boğaziçi data right.** The matches can only be as good as the researcher data behind them, so I rebuilt that dataset from scratch:
+
+- I started from **8,287** OpenAlex records with a Boğaziçi affiliation since 2020.
+- Items that are not research, such as errata, editorials, datasets and peer reviews, were dropped.
+- **163** duplicates were merged, for example a preprint and its published version, leaving **7,822 works**.
+- OpenAlex cuts author lists at 100 names, so for large collaborations I fetched the full list to find every Boğaziçi author.
+- Missing abstracts were looked up on Crossref and Semantic Scholar. They are used only to build the vector and are never stored or shown, because of publisher copyright.
+
+**Admin tools.** Admins can run the matching job on demand, rerun it for papers that found no match, and see a summary of user feedback by rank and model version.
+
+**Edge cases.** A new paper co-written with a Boğaziçi researcher is also in the Boğaziçi index, so it would match its own authors almost perfectly. The design rule is to exclude the paper itself from the search, matched by its OpenAlex id and DOI.
+
+## Why there is no LLM in the pipeline
+
+The original design had a second stage: after the embedding search, a small local LLM (Llama 3.2 3B) would rerank the candidates. That is a common pattern, and it raised the research question behind the whole project:
+
+> **Does reranking embedding-retrieved candidates with a small local LLM improve recommendation?**
+
+To answer it, I needed a way to measure "relevant" without asking people to label thousands of pairs. I used **citations** as a stand-in. For each query paper, the candidates mixed the papers it actually cites with distractors, and a good method should put the cited papers first.
+
+<PostImage src="/images/scholar-radar/ranking-primer.svg" alt="Ranking primer: three ways an LLM can rank candidates (pointwise, pairwise, listwise), the four ranking metrics worked out on one example, and the multi-stage pipeline used on the full corpus." />
+
+<p className="caption">The ranking vocabulary used below: pointwise vs. listwise ranking, and the metrics, worked out on one example. <a href="/images/scholar-radar/ranking-primer.svg" target="_blank" rel="noopener noreferrer">Open full size ↗</a></p>
+
+I compared 13 methods, all running locally, from TF-IDF and BM25 to small and large embedding models and several ways of using the LLM. The comparison ran in three settings:
+
+- **A citation benchmark:** 118 test queries, with candidates shuffled and every method run under the same conditions.
+- **A realistic corpus:** each query ranked against 11,967 papers instead of a short candidate list.
+- **Human expertise labels:** a public dataset in which 58 researchers rated their own expertise on 477 papers.
+
+The answer was the same every time: **the embedding model alone was best.**
+
+- **Qwen3-Embedding-8B** reached **87.0%** R-precision on the citation benchmark.
+- **MiniLM**, a model with only 22M parameters, was close behind at **83.3%**.
+- **Llama 3.2 3B ranking the whole list at once** scored **43.9%**, close to random (33.3%).
+
+The LLM's weakness turned out to be position bias. With nothing changed but the order of the candidates, the same model scored an MRR of **0.95** when the cited papers came first and **0.33** when they came last. Most of the time, it simply returned the candidates in the order it was given them.
+
+My first benchmark had actually shown the opposite, with the LLM well ahead. When I audited it, I found that the cited papers were always shown to the LLM first, so it was reading the answer from the order. Fixing that, and eight other problems, is what produced the results above. The full method and statistics are in the [paper draft](https://github.com/senaoz/SWE-599/blob/main/paper/main.pdf).
+
+So the LLM stage was removed. The app now uses a **single embedding stage**, which is more accurate, simpler, and much cheaper to run.
+
+## Read more
+
+The research is written up as a paper draft: **[Do Small Local LLM Rerankers Help Scientific Paper Recommendation? An Audit and Re-evaluation with Citation and Human Expertise Labels](https://github.com/senaoz/SWE-599/blob/main/paper/main.pdf)** (PDF). The app, the notebooks and the full results are on [GitHub](https://github.com/senaoz/SWE-599).
