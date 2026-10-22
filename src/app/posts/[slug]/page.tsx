@@ -18,9 +18,10 @@ export const generateStaticParams = async () =>
 export async function generateMetadata({
   params,
 }: {
-  params: Params;
+  params: Promise<Params>;
 }): Promise<Metadata> {
-  const { meta } = await getPostBySlug(params.slug);
+  const { slug } = await params;
+  const { meta } = await getPostBySlug(slug);
   const url = `/posts/${meta.slug}`;
 
   return {
@@ -43,8 +44,9 @@ export async function generateMetadata({
   };
 }
 
-const PostPage = async ({ params }: { params: Params }) => {
-  const { content, meta } = await getPostBySlug(params.slug);
+const PostPage = async ({ params }: { params: Promise<Params> }) => {
+  const { slug } = await params;
+  const { content, meta } = await getPostBySlug(slug);
 
   return (
     <div className="content">

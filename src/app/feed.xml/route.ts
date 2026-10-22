@@ -8,6 +8,8 @@ const escapeXml = (value: string) =>
     ] as string)
   );
 
+export const dynamic = "force-static";
+
 export function GET() {
   const posts = getAllPostsMeta();
 

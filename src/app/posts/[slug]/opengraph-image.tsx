@@ -1,4 +1,4 @@
-import { ImageResponse } from "next/server";
+import { ImageResponse } from "next/og";
 import { getPostMeta, getPostSlugs } from "../../../../lib/mdx";
 import { siteName } from "../../../../lib/site";
 
@@ -8,8 +8,13 @@ export const contentType = "image/png";
 export const generateStaticParams = async () =>
   getPostSlugs().map((slug) => ({ slug }));
 
-export default function Image({ params }: { params: { slug: string } }) {
-  const meta = getPostMeta(params.slug);
+export default async function Image({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const meta = getPostMeta(slug);
 
   return new ImageResponse(
     (
