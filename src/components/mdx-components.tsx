@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AnchorHTMLAttributes } from "react";
 
 interface MdxImageProps {
   src?: string;
@@ -29,4 +30,11 @@ export const PostImage = ({ src, alt = "", width, height }: MdxImageProps) => {
   );
 };
 
-export const mdxComponents = { PostImage, img: PostImage };
+export const PostLink = (props: AnchorHTMLAttributes<HTMLAnchorElement>) =>
+  /^https?:\/\//.test(props.href ?? "") ? (
+    <a {...props} target="_blank" rel="noopener noreferrer" />
+  ) : (
+    <a {...props} />
+  );
+
+export const mdxComponents = { PostImage, img: PostImage, a: PostLink };
