@@ -12,7 +12,7 @@ export default function HomePage() {
 
       <header className="hero">
         <h1 className="hero-name">Hey 👋 I’m Sena Oz.</h1>
-        <p className="hero-role">Software Engineer at Maestra.ai</p>
+        <p className="hero-role">Software Engineer</p>
         <p className="hero-bio">
           I am a Software Engineer passionate about creating impactful
           products. Always eager to learn and grow, I earned a Bachelor&apos;s
