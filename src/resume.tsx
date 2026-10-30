@@ -33,29 +33,26 @@ export const projects: Project[] = [
     ],
   },
   {
+    label: "Code Generation and Quality Checking using LLMs",
+    href: "https://drive.google.com/file/d/1sYXYhEuG13qCrz1KzC1Xjd8f30rf4_SO/view?usp=sharing",
+    description: [
+      "Term paper for SWE 577 at Boğaziçi University, advised by Assoc. Prof. Atay Özgövde.",
+      "Analyzed how code-generation benchmarks (HumanEval, MBPP, SWE-bench, SWE-Lancer) serve as proxies for developer trust, arguing that test pass rates miss semantic correctness, maintainability and usability.",
+    ],
+  },
+  {
     label: "Forecasting Model in Pharma Product Sales",
     description: [
-      "Developed a forecasting model for pharmaceutical product sales using Python.",
-      "The model will be instrumental in predicting future sales, enabling the company to optimize inventory management and production planning.",
-      "The project aims to enhance the company's decision-making process, ensuring a more efficient and cost-effective supply chain.",
+      "Undergraduate graduation project at Boğaziçi University, supervised by Prof. Aslı Sencer.",
+      "Team of three; built machine-learning and time-series models in Python to forecast SKU-level sales from six linked industry datasets.",
     ],
   },
   {
     label: "House Price Prediction Platform (Model&Frontend)",
     github: "https://github.com/senaoz/dss-frontend",
     description: [
-      "Created as part of the Decision Support Systems course, the King County house price prediction model addresses distrust in traditional real estate methods prevalent among Americans.",
-      "The project utilizes real estate market data for King County, employing regression analysis to reveal insights into the factors influencing home prices.",
-      "By providing data-driven decision support, the model aims to empower homebuyers and bridge the information gap in the King County housing market, fostering a more informed community.",
-    ],
-  },
-  {
-    label: "Code Feedback and ML Model Training Platform",
-    description: [
-      "In the pipeline, I worked on the development of a cutting-edge online code-running platform using a tech stack that includes ReactJS, Tailwind, and Typescript, seamlessly integrated with the ChatGPT API.",
-      "What sets this project apart is its innovative approach to gathering invaluable feedback on user-written code, which will be instrumental in refining machine learning models.",
-      "I designed and implemented a RESTful API using Strapi, ensuring a seamless user experience and robust backend functionality.",
-      "The project is set to revolutionize the way developers receive feedback on their code, offering real-time insights and enhancing the learning experience.",
+      "Decision Support Systems course project: a regression model of King County house prices with a web frontend.",
+      "Shows which factors drive home prices, as decision support for homebuyers.",
     ],
   },
   {
@@ -86,12 +83,6 @@ export const projects: Project[] = [
       "Built the authentication module (username & password reset tool) for a web system using JavaScript, Tailwind CSS, and Next.js.",
     ],
   },
-  {
-    label: "Coursera-like System",
-    description: [
-      "Built a system (WordPress, Airtable, and Moodle) that replaced a solution costing $2K/month, and increased course completion rate by 50%+.",
-    ],
-  },
 ];
 
 export const experience = [
@@ -99,22 +90,33 @@ export const experience = [
     title: "Software Engineer",
     firm: "Maestra.ai",
     timePeriod: "Jul 2024 – Present",
-    link: "https://maestra.ai/tools/video-dubber",
+    link: "https://maestra.ai",
     description: [
-      "Engineer scalable integrations with third-party APIs (ElevenLabs, Firebase) and distributed systems, optimizing data processing workflows and improving system reliability.",
-      "Design and implement modern UI components and backend services, applying algorithmic problem-solving to reduce task completion time by refactoring legacy code and decreasing technical debt.",
+      "Full-stack engineer on AI transcription, dubbing and real-time captioning products (React, Vue, Node.js, Python; Gemini, Soniox, ElevenLabs).",
+      "Built the iOS/Android app for Maestra Live with Capacitor ahead of its App Store release, including in-app purchases with server-side App Store/Play receipt verification.",
+      "Built an LLM translation pipeline with provider fallbacks and recovery from malformed model output, and moved voiceover generation onto Google Cloud Tasks with retries and rate limiting.",
+      "Built an automated Sentry triage pipeline with Claude Code that collects evidence from Sentry, runs code checks and opens draft fix PRs under a deny-by-default tool guard.",
     ],
   },
   {
-    title: "Software Engineer",
-    firm: "California State Uni., Silicon Valley Campus",
+    title: "Technical Consultant",
+    firm: "Ontario International High School",
+    timePeriod: "May 2025 – Present",
+    link: "https://oihs.ca",
+    description: [
+      "Sole engineer for the school's bilingual website and parent, student and teacher portal (React, Node.js, Airtable), working directly with school leadership.",
+      "Moved the full admissions-to-enrollment process into the portal and automated per-installment Stripe payments, replacing manual payment matching by staff.",
+      "Maintain the self-hosted Moodle infrastructure (Docker); after a data-loss incident, rebuilt its server configuration, added backup monitoring with alerts and co-prepared an incident report.",
+    ],
+  },
+  {
+    title: "Software Engineer Intern",
+    firm: "California State University",
     timePeriod: "Aug – Oct 2023",
     link: "https://www.sjsu.edu/",
     description: [
-      "Built an interactive code feedback platform using React, TypeScript, and Tailwind CSS, leveraging data structures and algorithm optimization to improve student learning outcomes by 35%.",
-      "Designed and implemented a RESTful API with Node.js to process real-time code submissions, applying software engineering best practices for scalable web application development.",
-      "Integrated machine learning capabilities via OpenAI API to generate intelligent, context-aware code feedback, demonstrating adaptability in learning and implementing AI technologies.",
-      "Led complete project lifecycle from design to deployment, collaborating with faculty and students to deliver a production-ready educational tool.",
+      "Built an LLM-powered (OpenAI API) platform that gives students feedback on their code and collects that feedback data for model improvement (React, TypeScript, Tailwind CSS, Node.js).",
+      "Worked with faculty from design to deployment.",
     ],
   },
   {
@@ -123,9 +125,9 @@ export const experience = [
     link: "https://www.orioninc.com/",
     timePeriod: "Nov 2022 – Nov 2023",
     description: [
-      "Built reusable components in React with TypeScript and SCSS for enterprise portals, ensuring consistency across web and mobile platforms.",
-      "Implemented comprehensive test coverage, including screenshot tests for visual regression and unit tests for functionality validation, ensuring stability and reliability of UI libraries.",
-      "Enhanced company-specific user interface libraries by resolving critical issues and developing new features based on stakeholder requirements.",
+      "Worked on a client project for a U.S. genetic-testing company within a 1,200+ developer organization.",
+      "Developed reusable, accessible (WCAG) React/TypeScript components for its web and mobile portals, documented in Storybook.",
+      "Added visual-regression and unit tests to keep the UI library stable.",
     ],
   },
   {
@@ -134,9 +136,9 @@ export const experience = [
     link: "https://yetkingencler.com/",
     timePeriod: "Mar 2021 – Jan 2023",
     description: [
-      "Led the development of a custom LMS that replaced a $2K/month solution and boosted course completion rates by 50%+.",
-      "Designed and implemented an authentication module using JavaScript and Next.js, supporting secure access for 3,500+ active users.",
-      "Reduced Azure and AWS deployment costs by 35% through optimized resource utilization and efficient infrastructure management.",
+      "Led development of a learning management system for 3,500+ learners that replaced a third-party platform, built from scratch over two years as the team grew past ten people.",
+      "Designed and implemented its authentication module (JavaScript, Next.js) and took part in designing its database.",
+      "Built it around WordPress, Airtable and Moodle with custom Next.js parts so the non-profit could run it without outsourcing, and owned its AWS and Azure infrastructure.",
     ],
   },
   {
@@ -167,6 +169,7 @@ export const skills = [
     list: [
       "React",
       "Next.js",
+      "Vue",
       "Redux",
       "FastAPI",
       "StoryBook",

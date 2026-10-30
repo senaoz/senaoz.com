@@ -14,14 +14,16 @@ export default function HomePage() {
         <h1 className="hero-name">Hey 👋 I’m Sena Oz.</h1>
         <p className="hero-role">Software Engineer</p>
         <p className="hero-bio">
-          I am a Software Engineer passionate about creating impactful
-          products. Always eager to learn and grow, I earned a Bachelor&apos;s
-          degree in MIS from Bogazici University and pursued a Master&apos;s in
-          Software Engineering. Currently, I work at{" "}
+          I am a software engineer who cares whether systems actually meet
+          people&apos;s needs. I hold an M.S. in Software Engineering and a
+          B.S. in Management Information Systems from Boğaziçi University, and
+          I work at{" "}
           <a href="https://maestra.ai" target="_blank" rel="noopener noreferrer">
             Maestra.ai
-          </a>
-          , contributing to innovative solutions.
+          </a>{" "}
+          on AI speech products. I am interested in how developers and
+          researchers retrieve, verify and come to trust AI-generated code and
+          information.
         </p>
         <div className="contact-links">
           <a href="https://www.linkedin.com/in/zsenaoz/" target="_blank" rel="noopener noreferrer">

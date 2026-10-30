@@ -9,7 +9,7 @@ export const siteName = "Sena Oz";
 export const siteTitle = "Sena Oz";
 
 export const siteDescription =
-  "I am a Software Engineer passionate about creating impactful products.";
+  "Software engineer interested in how developers and researchers verify and trust AI-generated code and information.";
 
 export const socialLinks = [
   "https://www.linkedin.com/in/zsenaoz/",
