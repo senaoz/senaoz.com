@@ -41,6 +41,16 @@ export const projects: Project[] = [
     ],
   },
   {
+    label: "Ontario International High School: Website and Admissions Portal",
+    href: "https://oihs.ca",
+    description: [
+      "Sole engineer for the school's bilingual (TR/EN) website and parent, student and teacher portal (React Router SSR, Node.js/Express, Airtable, TinaCMS).",
+      "Moved the full admissions-to-enrollment flow into the portal: 12 steps mapped to 18 back-office statuses, including a payment plan builder, on-screen signing of the payment agreement and team approval queues.",
+      "Per-installment Stripe Checkout with webhooks that record each payment against the right installment, replacing manual payment matching by staff.",
+      "SEO-focused site with a no-code admin hub on TinaCMS for non-technical staff, and a Markdown version of every page for AI agents.",
+    ],
+  },
+  {
     label: "Forecasting Model in Pharma Product Sales",
     description: [
       "Undergraduate graduation project at Boğaziçi University, supervised by Prof. Aslı Sencer.",
