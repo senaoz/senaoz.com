@@ -104,7 +104,7 @@ export const experience = [
     description: [
       "Full-stack engineer on AI transcription, dubbing and real-time captioning products (React, Vue, Node.js, Python; Gemini, Soniox, ElevenLabs).",
       "Built an LLM translation pipeline with provider fallbacks and recovery from malformed model output, and moved voiceover generation onto Google Cloud Tasks with retries and rate limiting.",
-      "Built an automated Sentry triage pipeline with Claude Code that collects evidence from Sentry, runs code checks and opens draft fix PRs under a deny-by-default tool guard.",
+      "Built user controls for steering live AI captioning and translation: custom vocabulary and word replacements for speech recognition, and per-language glossaries injected into Gemini translation prompts with fuzzy whole-word matching.",
     ],
   },
   {
