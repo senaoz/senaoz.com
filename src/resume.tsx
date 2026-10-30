@@ -99,17 +99,6 @@ export const experience = [
     ],
   },
   {
-    title: "Technical Consultant",
-    firm: "Ontario International High School",
-    timePeriod: "May 2025 – Present",
-    link: "https://oihs.ca",
-    description: [
-      "Sole engineer for the school's bilingual website and parent, student and teacher portal (React, Node.js, Airtable), working directly with school leadership.",
-      "Moved the full admissions-to-enrollment process into the portal and automated per-installment Stripe payments, replacing manual payment matching by staff.",
-      "Maintain the self-hosted Moodle infrastructure (Docker); after a data-loss incident, rebuilt its server configuration, added backup monitoring with alerts and co-prepared an incident report.",
-    ],
-  },
-  {
     title: "Software Engineer Intern",
     firm: "California State University",
     timePeriod: "Aug – Oct 2023",
